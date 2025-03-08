@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="kunlogo.png" type="image/png">
+<title>音乐咖</title>
+<link rel="stylesheet" href="style.css">
+<!-- 侵权请联系删除 -->
+</head>
+<body>  
+    <div class="container">
+        <div class="header">
+            <div class="cover" id="cover" style="background-color: rgb(185, 185, 185);"></div>
+            <div class="song-info">
+                <h2 id="song-title">光辉岁月</h2>
+                <p id="song-artist">Beyond</p>
+            </div>
+        </div>
+        <div class="visualizer-container">
+            <canvas id="visualizer" width="375" height="125"></canvas>
+        </div>  
+        <div class="controls">
+            <button id="prev">上一首</button>
+            <button id="play">播放</button>
+            <button id="pause">暂停</button>
+            <button id="next">下一首</button>
+            <button id="loop-single">单曲循环</button>
+            <button id="loop-all">列表循环</button>
+            <button id="loop-random">随机播放</button>
+        </div>        
+        <div class="progress-volume">
+            <div class="progress-container">
+                <div id="progress-text">播放进度</div>
+                <input type="range" class="progress-bar" id="progress-bar" value="0" max="100">
+            </div>
+            <div class="volume-container">
+                <input type="range" class="volume-bar" id="volume-bar" value="100" max="100">
+                <div id="volume-text">音量</div>
+            </div>
+        </div>
+        <div class="playlist">
+            <ul id="playlist"></ul>
+        </div>
+        <footer>
+            <p>音乐咖 © Kun © 侵权联系删除</p>
+        </footer>
+    </div>
+    <button class="contact-btn">反馈单</button>
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+          <button class="modal-close" id="closeModal">&times;</button>
+          <h2>音乐咖-反馈表单</h2>
+          <form action="https://formspree.io/f/mnnaygvd" method="POST">
+              <label for="name">名字</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="email">邮箱</label>
+              <input type="email" id="email" name="email" required>
+  
+              <label for="message">反馈</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+  
+              <button type="submit">发送</button>
+          </form>
+      </div>
+  </div>
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

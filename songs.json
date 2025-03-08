@@ -1,0 +1,751 @@
+{
+  "songs": [
+    {
+      "title": "边境",
+      "artist": "宋宇航",
+      "audio": "边境.mp3",
+      "cover": "宋宇航.jpg"
+    }
+    ,
+    {
+      "title": "宝可梦地平线（背景音乐1）",
+      "artist": "Pokemon Horizon",
+      "audio": "地平线1.mp3",
+      "cover": "Pokemon Horizon.jpg"
+    }
+    ,
+    {
+      "title": "加勒比海盗",
+      "artist": "Hans Zimmer",
+      "audio": "加勒比海盗.mp3",
+      "cover": "Hans Zimmer.jpg"
+    }
+    ,
+    {
+      "title": "江山令",
+      "artist": "路南",
+      "audio": "江山令.mp3",
+      "cover": "路南.jpg"
+    }
+    ,
+    {
+      "title": "乐高主题曲",
+      "artist": "lego ninjago",
+      "audio": "乐高主题曲.mp3",
+      "cover": "lego ninjago.jpg"
+    }
+    ,
+    {
+      "title": "黎鸣",
+      "artist": "喜多郎",
+      "audio": "黎鸣.mp3",
+      "cover": "喜多郎.jpg"
+    }
+    ,
+    {
+      "title": "新贵妃醉酒",
+      "artist": "李玉刚",
+      "audio": "新贵妃醉酒.mp3",
+      "cover": "李玉刚.jpg"
+    },
+    {
+      "title": "循迹",
+      "artist": "王子健",
+      "audio": "循迹.mp3",
+      "cover": "王子健.jpg"
+    },
+    {
+      "title": "异客",
+      "artist": "杨坤",
+      "audio": "异客.mp3",
+      "cover": "杨坤.jpg"
+    },
+    {
+      "title": "重生之我在异乡为异客",
+      "artist": "王睿卓",
+      "audio": "异客[改].mp3",
+      "cover": "王睿卓.jpg"
+    },
+    {
+      "title": "企业奋进",
+      "artist": "未知",
+      "audio": "企业奋进.mp3",
+      "cover": "Musica1.jpg"
+    },
+    {
+      "title": "Lifeline",
+      "artist": "Zeraphym",
+      "audio": "Lifeline.mp3",
+      "cover": "Musica1.jpg"
+    },
+    {
+      "title": "四字四音",
+      "artist": "未知",
+      "audio": "四字四音.mp3",
+      "cover": "Musica1.jpg"
+    },
+    {
+      "title": "喜剧舞台",
+      "artist": "未知",
+      "audio": "喜剧舞台.mp3",
+      "cover": "Musica1.jpg"
+    },
+    {
+      "title": "琴师",
+      "artist": "音频怪物",
+      "audio": "琴師.mp3",
+      "cover": "音频怪物.jpg"
+    },
+    {
+      "title": "琴师二胡3D",
+      "artist": "音频怪物",
+      "audio": "琴师二胡3D.mp3",
+      "cover": "音频怪物.jpg"
+    },
+    {
+      "title": "all to well",
+      "artist": "Taylor Swift",
+      "audio": "all to well.mp3",
+      "cover": "Taylor Swift.jpg"
+    },
+    {
+      "title": "champagne problems",
+      "artist": "Taylor Swift",
+      "audio": "champagne problems.mp3",
+      "cover": "Taylor Swift.jpg"
+    },
+    {
+      "title": "Love Story",
+      "artist": "Taylor Swift",
+      "audio": "Love Story.mp3",
+      "cover": "Taylor Swift.jpg"
+    },
+    {
+      "title": "maroon",
+      "artist": "Taylor Swift",
+      "audio": "marron.mp3",
+      "cover": "Taylor Swift.jpg"
+    },
+    {
+      "title": "numb",
+      "artist": "Linkin Park",
+      "audio": "numb.mp3",
+      "cover": "Linkin Park.jpg"
+    },
+    {
+      "title": "Way Back Home",
+      "artist": "SHAUN",
+      "audio": "Way Back Home.mp3",
+      "cover": "SHAUN.jpg"
+    },
+    {
+      "title": "You Belong With Me",
+      "artist": "Taylor Swift",
+      "audio": "You Belong With Me.mp3",
+      "cover": "Taylor Swift.jpg"
+    },
+    {
+      "title": "ハレハレヤ",
+      "artist": "RADWIMPS",
+      "audio": "ハレハレヤ.mp3",
+      "cover": "RADWIMPS.jpg"
+    },
+    {
+      "title": "Fly Away",
+      "artist": "TheFatRat",
+      "audio": "Fly Away.mp3",
+      "cover": "TheFatRat.jpg"
+    },
+    {
+      "title": "Monody",
+      "artist": "TheFatRat",
+      "audio": "Monody.mp3",
+      "cover": "TheFatRat.jpg"
+    },
+    {
+      "title": "Walk Thru Fire",
+      "artist": "Vecetone",
+      "audio": "Walk Thru Fire.mp3",
+      "cover": "Vecetone.jpg"
+    },
+    {
+      "title": "すずめ",
+      "artist": "RADWIMPS",
+      "audio": "すずめ.mp3",
+      "cover": "RADWIMPS.jpg"
+    },
+    {
+      "title": "ハロ",
+      "artist": "Pokemon Horizon",
+      "audio": "ハロ.mp3",
+      "cover": "Pokemon Horizon.jpg"
+    },
+    {
+      "title": "不染古琴",
+      "artist": "梁博",
+      "audio": "不染古琴.mp3",
+      "cover": "梁博.jpg"
+    },
+    {
+      "title": "前前前世",
+      "artist": "RADWIMPS",
+      "audio": "前前前世.mp3",
+      "cover": "RADWIMPS.jpg"
+    },
+    {
+      "title": "時代を越える想い",
+      "artist": "RADWIMPS",
+      "audio": "時代を越える想い.mp3",
+      "cover": "RADWIMPS.jpg"
+    },
+    {
+      "title": "芒种",
+      "artist": "赵方倩",
+      "audio": "芒种.mp3",
+      "cover": "赵方倩.jpg"
+    },
+    {
+      "title": "See You Again",
+      "artist": "Wiz Khalifa ft. Charlie Puth",
+      "audio": "See You Again.mp3",
+      "cover": "Wiz Khalifa ft. Charlie Puth.jpg"
+    },
+    {
+      "title": "山鬼",
+      "artist": "Winky诗",
+      "audio": "山鬼.mp3",
+      "cover": "Winky诗.jpg"
+    },
+    {
+      "title": "火紅的薩日朗",
+      "artist": "乌兰托娅",
+      "audio": "火紅的薩日朗.mp3",
+      "cover": "乌兰托娅.jpg"
+    },
+    {
+      "title": "笑納",
+      "artist": "霍尊",
+      "audio": "笑納.mp3",
+      "cover": "霍尊.jpg"
+    },
+    {
+      "title": "Closer",
+      "artist": "The Chainsmokers",
+      "audio": "Closer.mp3",
+      "cover": "The Chainsmokers.jpg"
+    },
+    {
+      "title": "Nevada",
+      "artist": "Vicetone",
+      "audio": "Nevada.mp3",
+      "cover": "Vicetone.jpg"
+    },
+    {
+      "title": "NIGHT DANCER",
+      "artist": "Imase",
+      "audio": "NIGHT DANCER.mp3",
+      "cover": "Imase.jpg"
+    },
+    {
+      "title": "稻香",
+      "artist": "Jay Chou",
+      "audio": "稻香.mp3",
+      "cover": "Jay Chou.jpg"
+    },
+    {
+      "title": "恋",
+      "artist": "星野源",
+      "audio": "恋.mp3",
+      "cover": "星野源.jpg"
+    },
+    {
+      "title": "心做し",
+      "artist": "蝶々P",
+      "audio": "心做し.mp3",
+      "cover": "蝶々P.jpg"
+    },
+    {
+      "title": "告白氣球",
+      "artist": "Jay Chou",
+      "audio": "告白氣球.mp3",
+      "cover": "Jay Chou.jpg"
+    },
+    {
+      "title": "Amor, Amor de Mis Amores",
+      "artist": "Natalia Lafourcade",
+      "audio": "Amor, Amor de Mis Amores.mp3",
+      "cover": "Natalia Lafourcade.jpg"
+    },
+    {
+      "title": "Despacito ft Daddy Yankee",
+      "artist": "Luis Fonsi",
+      "audio": "Despacito ft. Daddy Yankee.mp3",
+      "cover": "Luis Fonsi.jpg"
+    },
+    {
+      "title": "易燃易爆炸",
+      "artist": "陈粒",
+      "audio": "易燃易爆炸.mp3",
+      "cover": "陈粒.jpg"
+    },
+    {
+      "title": "Bad Habits",
+      "artist": "Ed Sheeran",
+      "audio": "Bad Habits.mp3",
+      "cover": "Ed Sheeran.jpg"
+    },
+    {
+      "title": "FAKE LOVE",
+      "artist": "BTS",
+      "audio": "FAKE LOVE.mp3",
+      "cover": "BTS.jpg"
+    },
+    {
+      "title": "Shinunoga E-Wa",
+      "artist": "Fujii Kaze",
+      "audio": "Shinunoga E-Wa.mp3",
+      "cover": "Fujii Kaze.jpg"
+    },
+    {
+      "title": "Criminal",
+      "artist": "Britney Spears",
+      "audio": "Criminal.mp3",
+      "cover": "Britney Spears.jpg"
+    },
+    {
+      "title": "Cómo Te Extraño Mi Amor",
+      "artist": "Luis Martínez MX",
+      "audio": "Cómo Te Extraño Mi Amor.mp3",
+      "cover": "Luis Martínez MX.jpg"
+    },
+    {
+      "title": "Dynamite",
+      "artist": "BTS",
+      "audio": "Dynamite.mp3",
+      "cover": "BTS.jpg"
+    },
+    {
+      "title": "体面 Decency",
+      "artist": "于文文",
+      "audio": "体面 Decency.mp3",
+      "cover": "于文文.jpg"
+    },
+    {
+      "title": "春泥棒",
+      "artist": "Yorushika",
+      "audio": "春泥棒.mp3",
+      "cover": "Yorushika.jpg"
+    },
+    {
+      "title": "小幸運",
+      "artist": "Hebbe Tien",
+      "audio": "小幸運.mp3",
+      "cover": "Hebbe Tien.jpg"
+    },
+    {
+      "title": "突然好想你",
+      "artist": "Mayday",
+      "audio": "突然好想你.mp3",
+      "cover": "Mayday.jpg"
+    },
+    {
+      "title": "YOASOBI",
+      "artist": "YOASOBI",
+      "audio": "YOASOBI.mp3",
+      "cover": "YOASOBI.jpg"
+    },
+    {
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "audio": "紅蓮華.mp3",
+      "cover": "LiSA.jpg"
+    },
+    {
+      "title": "DANCE MONKEY",
+      "artist": "Tones and I",
+      "audio": "DANCE MONKEY.mp3",
+      "cover": "Tones and I.jpg"
+    },
+    {
+      "title": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "audio": "Watermelon Sugar.mp3",
+      "cover": "Harry Styles.jpg"
+    },
+    {
+      "title": "Sunflower",
+      "artist": "Post Malone",
+      "audio": "Sunflower.mp3",
+      "cover": "Post Malone.jpg"
+    },
+    {
+      "title": "Old Town Road",
+      "artist": "Lil Nas X",
+      "audio": "Old Town Road.mp3",
+      "cover": "Lil Nas X.jpg"
+    },
+    {
+      "title": "Happier Than Ever",
+      "artist": "Billie Eilish",
+      "audio": "Happier Than Ever.mp3",
+      "cover": "Billie Eilish.jpg"
+    },
+    {
+      "title": "Circles",
+      "artist": "Post Malone",
+      "audio": "Circles.mp3",
+      "cover": "Post Malone.jpg"
+    },
+    {
+      "title": "Peaches",
+      "artist": "Justin Bieber",
+      "audio": "Peaches.mp3",
+      "cover": "Jbustin Bieer.jpg"
+    },
+    {
+      "title": "Shallow",
+      "artist": "Lady Gaga",
+      "audio": "Shallow.mp3",
+      "cover": "Lady Gaga.jpg"
+    },
+    {
+      "title": "Despacito",
+      "artist": "Luis Fonsi",
+      "audio": "Despacito.mp3",
+      "cover": "Luis Fonsi.jpg"
+    },
+    {
+      "title": "Faded",
+      "artist": "Alan Walker",
+      "audio": "Faded.mp3",
+      "cover": "Alan Walker.jpg"
+    },
+    {
+      "title": "Believer",
+      "artist": "Imagine Dragons",
+      "audio": "Believer.mp3",
+      "cover": "Imagine Dragons.jpg"
+    },
+    {
+      "title": "Don t Start Now",
+      "artist": "Dua Lipa",
+      "audio": "Don t Start Now.mp3",
+      "cover": "Dua Lipa.jpg"
+    },
+    {
+      "title": "bad guy",
+      "artist": "Billie Eilish",
+      "audio": "bad guy.mp3",
+      "cover": "Billie Eilish.jpg"
+    },
+    {
+      "title": "Señorita",
+      "artist": "Shawn Mendes, Camila Cabello",
+      "audio": "Señorita.mp3",
+      "cover": "Shawn Mendes, Camila Cabello.jpg"
+    },
+    {
+      "title": "Someone You Loved",
+      "artist": "Lewis Capaldi",
+      "audio": "Someone You Loved.mp3",
+      "cover": "Lewis Capaldi.jpg"
+    },
+    {
+      "title": "Levitating Featuring DaBaby",
+      "artist": "Dua Lipa",
+      "audio": "Levitating Featuring DaBaby.mp3",
+      "cover": "Dua Lipa.jpg"
+    },
+    {
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "audio": "Shape of You.mp3",
+      "cover": "Ed Sheeran.jpg"
+    },
+    {
+      "title": "STAY，Blinding Lights",
+      "artist": "The Kid LAROI, The Weeknd",
+      "audio": "STAY.mp3",
+      "cover": "The Kid LAROI, The Weeknd.jpg"
+    },
+    {
+      "title": "DDU-DU DDU-DU",
+      "artist": "BLACKPINK",
+      "audio": "DDU-DU DDU-DU.mp3",
+      "cover": "BLACKPINK.jpg"
+    },
+    {
+      "title": "Roses",
+      "artist": "SAINt JHN",
+      "audio": "Roses.mp3",
+      "cover": "SAINt JHN.jpg"
+    },
+    {
+      "title": "馬と鹿",
+      "artist": "米津玄師",
+      "audio": "馬と鹿.mp3",
+      "cover": "米津玄師.jpg"
+    },
+    {
+      "title": "Salley Gardens",
+      "artist": "David Davidson",
+      "audio": "Salley Gardens.mp3",
+      "cover": "David Davidson.jpg"
+    },
+    {
+      "title": "渡月桥思君",
+      "artist": "倉木麻衣",
+      "audio": "渡月桥思君.mp3",
+      "cover": "倉木麻衣.jpg"
+    },
+    {
+      "title": "探故知",
+      "artist": "淺影阿",
+      "audio": "探故知.mp3",
+      "cover": "淺影阿.jpg"
+    },
+    {
+      "title": "Solo Dance Slowed",
+      "artist": "Martin Jensen",
+      "audio": "Solo Dance Slowed.mp3",
+      "cover": "Martin Jensen.jpg"
+    },
+    {
+      "title": "Hands in the Fire",
+      "artist": "James Carter & Nevve",
+      "audio": "Hands in the Fire.mp3",
+      "cover": "James Carter & Nevve.jpg"
+    },
+    {
+      "title": "白鸽乌鸦相爱的戏码",
+      "artist": "潘成（皮卡潘）",
+      "audio": "白鸽乌鸦相爱的戏码.mp3",
+      "cover": "潘成（皮卡潘）.jpg"
+    },
+    {
+      "title": "转身即心痛",
+      "artist": "吉星出租",
+      "audio": "转身即心痛.mp3",
+      "cover": "吉星出租.jpg"
+    },
+    {
+      "title": "往生咒（黑神话悟空）",
+      "artist": "黑神话悟空",
+      "audio": "往生咒（黑神话悟空）.mp3",
+      "cover": "黑神话悟空.jpg"
+    },
+    {
+      "title": "壁上观",
+      "artist": "张晓涵",
+      "audio": "壁上观.mp3",
+      "cover": "张晓涵.jpg"
+    },
+    {
+      "title": "月神赋",
+      "artist": "王子健",
+      "audio": "月神赋.mp3",
+      "cover": "王子健.jpg"
+    },
+    {
+      "title": "屁（黑神话悟空）",
+      "artist": "黑神话悟空",
+      "audio": "屁.mp3",
+      "cover": "黑神话悟空.jpg"
+    },
+    {
+      "title": "离别开出花（弹唱版）",
+      "artist": "就是南方凯",
+      "audio": "离别开出花.mp3",
+      "cover": "就是南方凯.jpg"
+    },
+    {
+      "title": "芦苇飞",
+      "artist": "泡芙芙Scarlett",
+      "audio": "芦苇飞.mp3",
+      "cover": "Musica1.jpg"
+    },
+    {
+      "title": "三界四洲",
+      "artist": "黑神话悟空",
+      "audio": "三界四洲.mp3",
+      "cover": "黑神话悟空.jpg"
+    },
+    {
+      "title": "wolves",
+      "artist": "Selena Gomez, Marshmello",
+      "audio": "wolves.mp3",
+      "cover": "Selena Gomez, Marshmello.jpg"
+    },
+    {
+      "title": "Wake-oao",
+      "artist": "Jiks Gallenero",
+      "audio": "Wake-oao.mp3",
+      "cover": "Jiks Gallenero.jpg"
+    },
+    {
+      "title": "天地龙鳞",
+      "artist": "王力宏",
+      "audio": "天地龙鳞.mp3",
+      "cover": "王力宏.jpg"
+    },
+    {
+      "title": "风经过 唱离合",
+      "artist": "张朕 & 婉枫（张朕）",
+      "audio": "风经过 唱离合.mp3",
+      "cover": "张朕& 婉枫.jpg"
+    }
+    ,
+    {
+      "title": "须尽欢",
+      "artist": "鄭浩",
+      "audio": "须尽欢.mp3",
+      "cover": "鄭浩.jpg"
+    }
+    ,
+    {
+      "title": "Faded异域(hannibal)",
+      "artist": "麦斯米科尔森",
+      "audio": "Faded异域(hannibal).mp3",
+      "cover": "麦斯米科尔森.jpg"
+    }
+    ,
+    {
+      "title": "Wonder What to Say",
+      "artist": "Marc Torch",
+      "audio": "Wonder What to Say.mp3",
+      "cover": "Marc Torch.jpg"
+    }
+    ,
+    {
+      "title": "titanic + my heart will go on （mashup melody）",
+      "artist": "未知",
+      "audio": "titanic + my heart will go on (mashup melody).mp3",
+      "cover": "Musica1.jpg"
+    }
+    ,
+    {
+      "title": "MY ALL",
+      "artist": "濱崎步",
+      "audio": "MY ALL.mp3",
+      "cover": "濱崎步.jpg"
+    }
+    ,
+    {
+      "title": "弱水三千",
+      "artist": "Walker、JOJO",
+      "audio": "弱水三千.mp3",
+      "cover": "Musica1.jpg"
+    }
+    ,
+    {
+      "title": "王者战歌",
+      "artist": "王者荣耀",
+      "audio": "王者战歌.mp3",
+      "cover": "王者荣耀.jpg"
+    }
+    ,
+    {
+      "title": "王者冰刃",
+      "artist": "王者荣耀",
+      "audio": "王者冰刃.mp3",
+      "cover": "王者荣耀.jpg"
+    }
+    ,
+    {
+      "title": "盜將行",
+      "artist": "花粥，馬雨陽",
+      "audio": "盜將行.mp3",
+      "cover": "花粥.jpg"
+    }
+    ,
+    {
+      "title": "老鼠爱大米",
+      "artist": "七元",
+      "audio": "老鼠爱大米.mp3",
+      "cover": "七元.jpg"
+    }
+    ,
+    {
+      "title": "错位时空（钢琴）",
+      "artist": "艾辰",
+      "audio": "错位时空.mp3",
+      "cover": "艾辰.jpg"
+    }
+    ,
+    {
+      "title": "月下残影",
+      "artist": "杜贴心",
+      "audio": "月下残影.m4a",
+      "cover": "杜贴心.jpg"
+    },
+    {
+      "title": "新月原野",
+      "artist": "一颗狼星",
+      "audio": "新月原野.mp3",
+      "cover": "一颗狼星.jpg"
+    }
+    ,
+    {
+      "title": "宝可梦地平线探索队1",
+      "artist": "Pokemon Horizon",
+      "audio": "宝可梦地平线探索队1.mp3",
+      "cover": "Pokemon Horizon.jpg"
+    }
+    ,
+    {
+      "title": "宝可梦地平线探索队2",
+      "artist": "Pokemon Horizon",
+      "audio": "宝可梦地平线探索队2.mp3",
+      "cover": "Pokemon Horizon.jpg"
+    }
+    ,
+    {
+      "title": "谪居",
+      "artist": "淺影阿",
+      "audio": "谪居.m4a",
+      "cover": "淺影阿.jpg"
+    }
+    ,
+    {
+      "title": "Let Her Go (Magic Cover Release)",
+      "artist": "lost., Honeyfox, Pop Mage",
+      "audio": "lost., Honeyfox, Pop Mage - Let Her Go (Magic Cover Release).mp3",
+      "cover": "lost., Honeyfox, Pop Mage.jpg"
+    }
+    ,
+    {
+      "title": "火红的萨日朗",
+      "artist": "要不要买菜",
+      "audio": "火红的萨日朗，要不要买菜.mp3",
+      "cover": "要不要买菜.jpg"
+    }
+    ,
+    {
+      "title": "怎叹",
+      "artist": "郑鱼",
+      "audio": "怎叹，郑鱼.mp3",
+      "cover": "郑鱼.jpg"
+    }
+    ,
+    {
+      "title": "心经（日语）",
+      "artist": "药师寺宽邦",
+      "audio": "心经（日语），一休寺.mp3",
+      "cover": "药师寺宽邦.jpg"
+    }
+    ,
+    {
+      "title": "避瘟符咒",
+      "artist": "药师寺宽邦",
+      "audio": "避瘟符咒.mp3",
+      "cover": "药师寺宽邦.jpg"
+    },
+    {
+      "title": "李太白(抒情版)",
+      "artist": "淺影阿",
+      "audio": "浅影阿 - 李太白 (抒情版).ogg",
+      "cover": "淺影阿.jpg"
+    }
+  ]
+}
+

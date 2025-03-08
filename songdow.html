@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube MP3 Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      word-wrap: break-word;
+    }
+    .result a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>YouTube MP3 Converter</h2>
+    <p>请输入 YouTube 视频链接：</p>
+    <input type="text" id="youtubeUrl" placeholder="例如：https://www.youtube.com/watch?v=GDRyigWvUFg">
+    <button id="convertBtn">转换为 MP3</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('convertBtn').addEventListener('click', function(){
+      var youtubeUrl = document.getElementById('youtubeUrl').value.trim();
+      if (!youtubeUrl) {
+        alert("请输入有效的 YouTube 链接");
+        return;
+      }
+      
+      // 构造 API URL（对整个链接进行 URL 编码）
+      var apiUrl = "https://youtube-to-mp3-converter-free-and-easy-conversion-api.p.rapidapi.com/api.php?yt=" + encodeURIComponent(youtubeUrl);
+      
+      fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'youtube-to-mp3-converter-free-and-easy-conversion-api.p.rapidapi.com',
+          'x-rapidapi-key': '9a0e7b0327msh2a05196786c7384p1799f7jsn5dc43ab350ba'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        var resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = "";
+        // 假设返回数据中包含 link 字段，实际请参考 API 文档
+        if(data.link) {
+          var downloadLink = document.createElement('a');
+          downloadLink.href = data.link;
+          downloadLink.textContent = "点击下载 MP3 文件";
+          downloadLink.setAttribute("download", "");
+          resultDiv.appendChild(downloadLink);
+        } else {
+          resultDiv.textContent = "未能获取下载链接，请检查链接或稍后再试。";
+        }
+      })
+      .catch(error => {
+        console.error("请求错误:", error);
+        document.getElementById('result').textContent = "请求失败，请稍后再试。";
+      });
+    });
+  </script>
+</body>
+</html>

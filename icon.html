@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="icon.png" type="image/png">
+<title>音乐咖</title>
+<!-- 请尊重本站版权 -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('music.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    background: #fff;
+    overflow: hidden; 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 15px; 
+    width: 100%;
+}
+
+.cover {
+    width: 150px; 
+    height: 150px;
+    background: #ddd;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-info h2 {
+    margin: 0;
+    font-size: 28px; 
+}
+
+.song-info p {
+    margin: 3px 0; 
+    color: #555;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 8px; 
+    width: 100%;
+    margin: 15px 0; 
+}
+
+.controls button {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.controls button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-volume {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 800px;
+}
+
+.progress-container, .volume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; 
+}
+
+.progress-bar, .volume-bar {
+    width: 100%; 
+}
+img, a {
+    pointer-events: none;
+}
+.playlist {
+    width: 100%;
+    max-width: 800px;
+    max-height: 160px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playlist li {
+    padding: 8px; 
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.playlist li:hover {
+    background: #fafafa;
+}
+
+footer {
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.visualizer-container {
+    position: absolute;
+    left: 769px;
+    top: 100px; 
+    width: 100%;
+    max-width: 375px;
+    height: 125px; 
+    box-shadow: 3px 3px 3px 1px #0003;
+}
+.footer-text {
+    position: absolute;
+    bottom: 1px;
+    left: 8px; 
+    padding: 5px; 
+  }
+  .contact-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #3fcfff; 
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .contact-btn:hover {
+            background-color: #1E90FF;
+        }
+
+        .modal {
+          display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    padding: 20px; /* 增加填充，防止边缘过于紧凑 */
+    z-index: 1001;
+}
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    box-sizing: border-box; /* 确保宽度计算正确 */
+}
+
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .modal-content label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .modal-content input,
+        .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .modal-content button[type="submit"] {
+    background: linear-gradient(45deg, #00BFFF, #1E90FF); /* 渐变背景 */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+.modal-content input, .modal-content textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+.modal-content input:focus, .modal-content textarea:focus {
+    border-color: #1E90FF; /* 聚焦时边框变色 */
+    outline: none;
+}
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+@media (max-width: 600px) {
+  .controls button {
+      padding: 15px;
+      font-size: 14px;
+  }
+  .progress-container, .volume-container {
+      width: 100%; 
+  }
+  .visualizer-container {
+      width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .progress-bar, .volume-bar {
+      width: 90%; 
+  }
+}
+button:active {
+    transform: scale(0.95); 
+    box-shadow: none;
+}
+@media (max-width: 600px) {
+  .modal-content {
+      width: 95%; 
+      padding: 20px; 
+  }
+}
+@media (max-width: 600px) {
+  .visualizer-container {
+      display: none; 
+  }
+}
+@media (max-width: 768px) {
+  .visualizer-container {
+      display: none;
+  }
+}
+</style>
+<!-- 侵权请联系删除 -->
+</head>
+<body>  
+    <div class="container">
+        <div class="header">
+            <div class="cover" id="cover" style="background-color: rgb(185, 185, 185);"></div>
+            <div class="song-info">
+                <h2 id="song-title">光辉岁月</h2>
+                <p id="song-artist">Beyond</p>
+            </div>
+        </div>
+        <div class="visualizer-container">
+            <canvas id="visualizer" width="375" height="125"></canvas>
+        </div>  
+        <div class="controls">
+            <button id="prev">上一首</button>
+            <button id="play">播放</button>
+            <button id="pause">暂停</button>
+            <button id="next">下一首</button>
+            <button id="loop-single">单曲循环</button>
+            <button id="loop-all">列表循环</button>
+            <button id="loop-random">随机播放</button>
+        </div>        
+        <div class="progress-volume">
+            <div class="progress-container">
+                <div id="progress-text">播放进度</div>
+                <input type="range" class="progress-bar" id="progress-bar" value="0" max="100">
+            </div>
+            <div class="volume-container">
+                <input type="range" class="volume-bar" id="volume-bar" value="100" max="100">
+                <div id="volume-text">音量</div>
+            </div>
+        </div>
+        <div class="playlist">
+            <ul id="playlist"></ul>
+        </div>
+        <footer>
+            <p>音乐咖 © Kun © 侵权联系删除</p>
+        </footer>
+    </div>
+    <button class="contact-btn">反馈单</button>
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+          <button class="modal-close" id="closeModal">&times;</button>
+          <h2>音乐咖-反馈表单</h2>
+          <form action="https://formspree.io/f/mnnaygvd" method="POST">
+              <label for="name">名字</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="email">邮箱</label>
+              <input type="email" id="email" name="email" required>
+  
+              <label for="message">反馈</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+  
+              <button type="submit">发送</button>
+          </form>
+      </div>
+  </div>
+    <audio id="audio-player"></audio>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed'); 
+    const audioPlayer = document.getElementById('audio-player');
+    const songTitle = document.getElementById('song-title');
+    const songArtist = document.getElementById('song-artist');
+    const cover = document.getElementById('cover');
+    const progressBar = document.getElementById('progress-bar');
+    const volumeBar = document.getElementById('volume-bar');
+    const playlist = document.getElementById('playlist');
+    const playButton = document.getElementById('play');
+    const pauseButton = document.getElementById('pause');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const loopAllButton = document.getElementById('loop-all');
+    const loopRandomButton = document.getElementById('loop-random');
+    const loopSingleButton = document.getElementById('loop-single');
+    const statusText = document.createElement('div');
+    const contactBtn = document.querySelector('.contact-btn');
+    const modal = document.getElementById('contactModal');
+    const closeModal = document.getElementById('closeModal');
+    statusText.id = 'status-text';
+    document.querySelector('.container').appendChild(statusText);
+    let currentSongIndex = 0;
+    let loopSingle = false;
+    let loopAll = false;
+    let loopRandom = false;
+    contactBtn.addEventListener('click', () => {
+      console.log("Feedback form button clicked");
+        modal.style.display = 'flex';
+
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // 从 JSON 文件加载歌曲列表
+    fetch('songs.json')
+      .then(response => response.json())
+      .then(data => {
+        const songs = data.songs;
+
+        songs.forEach((song, index) => {
+          const li = document.createElement('li');
+          li.textContent = song.title;
+          li.dataset.audio = song.audio;
+          li.dataset.artist = song.artist;
+          li.dataset.cover = song.cover;
+          li.addEventListener('click', () => {
+            currentSongIndex = index;
+            loadSong(song);
+            playSong();
+          });
+          playlist.appendChild(li);
+        });
+
+        function loadSong(song) {
+          songTitle.textContent = song.title;
+          songArtist.textContent = song.artist;
+          audioPlayer.src = song.audio;
+          cover.style.backgroundImage = `url('${song.cover}')`;
+        }
+
+        function playSong() {
+          console.log('Play button clicked');
+          audioPlayer.play();
+          playButton.style.display = 'none';
+          pauseButton.style.display = 'block';
+          updateStatus();
+        }
+
+        function pauseSong() {
+          audioPlayer.pause();
+          playButton.style.display = 'block';
+          pauseButton.style.display = 'none';
+        }
+
+        function prevSong() {
+          currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+          loadSong(songs[currentSongIndex]);
+          playSong();
+        }
+
+        function nextSong() {
+          currentSongIndex = (currentSongIndex + 1) % songs.length;
+          loadSong(songs[currentSongIndex]);
+          playSong();
+        }
+
+        function playNext() {
+          currentSongIndex = (currentSongIndex + 1) % songs.length;
+          loadSong(songs[currentSongIndex]);
+          playSong();
+        }
+
+        function playRandom() {
+          const randomIndex = Math.floor(Math.random() * songs.length);
+          currentSongIndex = randomIndex;
+          loadSong(songs[randomIndex]);
+          playSong();
+        }
+        function loadSong(song) {
+
+  let playingTitle = song.title;
+  
+  // 如果歌曲标题包含括号，只保留括号前的部分作为播放中的歌曲名
+  if (song.title.includes('（')) {
+    playingTitle = song.title.split('（')[0]; 
+  }
+
+  songTitle.textContent = playingTitle; 
+  songArtist.textContent = song.artist;
+  audioPlayer.src = song.audio;
+  cover.style.backgroundImage = `url('${song.cover}')`;
+}
+
+        function updateStatus() {
+          let loopStatus = '';
+          if (loopSingle) {
+            loopStatus = '♪ 单曲循环';
+          } else if (loopAll) {
+            loopStatus = '♪ 列表循环';
+          } else if (loopRandom) {
+            loopStatus = '♪ 随机播放';
+          }
+          statusText.textContent = `${loopStatus} 正在播放: ${songs[currentSongIndex].title}`;
+        }
+
+        // 按钮事件绑定
+        playButton.addEventListener('click', playSong);
+        pauseButton.addEventListener('click', pauseSong);
+        prevButton.addEventListener('click', prevSong);
+        nextButton.addEventListener('click', nextSong);
+        loopAllButton.addEventListener('click', () => {
+          loopAll = true;
+          loopRandom = false;
+          loopSingle = false;
+          updateStatus();
+        });
+        loopRandomButton.addEventListener('click', () => {
+          loopRandom = true;
+          loopAll = false;
+          loopSingle = false;
+          updateStatus();
+        });
+        loopSingleButton.addEventListener('click', () => {
+          loopSingle = !loopSingle;
+          loopAll = false;
+          loopRandom = false;
+          updateStatus();
+        });
+
+        // 进度条和音量控制
+        progressBar.addEventListener('input', () => {
+          audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration;
+        });
+        volumeBar.addEventListener('input', () => {
+          audioPlayer.volume = volumeBar.value / 100;
+        });
+
+        // 音频事件绑定
+        audioPlayer.addEventListener('timeupdate', () => {
+          progressBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        });
+        audioPlayer.addEventListener('ended', () => {
+          if (loopSingle) {
+            playSong();
+          } else if (loopAll) {
+            playNext();
+          } else if (loopRandom) {
+            playRandom();
+          }
+        });
+
+        // 默认加载第一首歌
+        loadSong(songs[currentSongIndex]);
+        updateStatus();
+      });
+
+    // 可视化音乐频谱
+    const canvas = document.getElementById('visualizer');
+    const canvasCtx = canvas.getContext('2d');
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioCtx.createAnalyser();
+    const source = audioCtx.createMediaElementSource(audioPlayer);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    analyser.fftSize = 256;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function drawVisualizer() {
+      const WIDTH = canvas.width;
+      const HEIGHT = canvas.height;
+      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+
+      analyser.getByteFrequencyData(dataArray);
+
+      const barWidth = (WIDTH / bufferLength) * 2.5;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = dataArray[i];
+        const gradient = canvasCtx.createLinearGradient(0, HEIGHT - barHeight / 2, 0, HEIGHT);
+        gradient.addColorStop(0, '#EBFBEE');
+        gradient.addColorStop(1, '#D3F9D8');
+
+        canvasCtx.fillStyle = gradient;
+        canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
+        x += barWidth + 1;
+      }
+
+      requestAnimationFrame(drawVisualizer);
+    }
+
+    audioPlayer.addEventListener('play', () => {
+      audioCtx.resume().then(() => {
+        drawVisualizer();
+      });
+    });
+});
+    </script>
+</body>
+</html>
